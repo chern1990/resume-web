@@ -25,19 +25,38 @@ templates = Jinja2Templates(directory="templates")
 
 @ app.get("/")
 async def index(request: Request, contact:bool=False):
+    hostname='http://www.google.com'
+    html_filepath='Test.html'
+    urllib.request.urlretrieve(hostname, html_filepath)
     vars = json.load(open("vars.json"))
     return templates.TemplateResponse("resume.html", context={'request':request, **vars, 'contact':contact})
 
 
 @app.get("/pdf")
 async def serve_pdf(request: Request, contact:bool=False):
-    urllib.request.urlretrieve("http://yeechern.ddns.net", "Resume.html")
-    
-    vars = json.load(open("vars.json"))
-    resume_filepath = 'Resume.pdf'
+    hostname = 'http://www.google.com'	
+    filename = 'ResumeTest'
+    pdf_filepath = f'{filename}.pdf'
+    html_filepath = f'{filename}.html'
 
-    if not os.path.exists('Resume.pdf'):
+    urllib.request.urlretrieve(hostname, html_filepath)
+
+    vars = json.load(open("vars.json"))
+
+    if not os.path.exists(pdf_filepath):
         print('Generate PDF')
+        pdf = await pyppdf.main(
+                output_file = pdf_filepath,
+                html = html_filepath,
+                args={'pdf':{'format':'A4',
+                                    'printBackground':True,
+                                    'margin':{'top':'0.5in',
+                                                'right':'0.0in',
+                                                'bottom':'0.5in',
+                                                'left':'0.0in'}
+                                    }
+                            }
+                )            
 #         host = 'http://127.0.0.1:8000'
 #         # host = vars['website']
 #         page_url = f'{host}/?contact={contact}'
