@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{resume_title}}</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive Resume Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="/static/favicon.ico">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js"
+        integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a"
+        crossorigin="anonymous"></script>
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="/static/css/pillar-1.css">
+</head>
+
+<body>
+    <div id='capture'>
+        <article class="resume-wrapper text-center position-relative">
+            <div class="resume-wrapper-inner mx-auto text-left bg-white shadow-lg">
+                <header class="resume-header pt-4 pt-md-0">
+                    <div class="media flex-column flex-md-row">
+                        <div class="mx-auto">
+                            <a href="#" id="profile-pic"><img class="mr-3 img-fluid picture mx-auto"
+                                    src="/static/misc/profile.jpg" alt=""></a>
+                        </div>
+                        <div class=" media-body p-4 d-flex flex-column flex-md-row mx-auto mx-lg-0">
+                            <div class="primary-info">
+                                <span ondblclick="window.location='/pdf'">
+                                <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">{{name}}</h1>
+                                </span>
+                                <div class="title mb-3">{{resume_title}}</div>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><a href="#"><i class="far fa-envelope fa-fw mr-2"
+                                                data-fa-transform="grow-3"></i>{{email}}</a></li>
+                                    <li id="mobile"><a href="#"><i class="fas fa-mobile-alt fa-fw mr-2"
+                                                data-fa-transform="grow-6"></i>{{mobile}}</a></li>
+                                </ul>
+                            </div>
+                            <div class="secondary-info ml-md-auto mt-2">
+                                <ul class="resume-social list-unstyled">
+                                    <li class="mb-3"><a href="{{linkedin}}"><span
+                                                class="fa-container text-center mr-2"><i
+                                                    class="fab fa-linkedin-in fa-fw"></i></span>
+                                            {{linkedin}}</a>
+                                    </li>
+                                    <li class="mb-3"><a href="{{github}}"><span class="fa-container text-center mr-2"><i
+                                                    class="fab fa-github-alt fa-fw"></i></span>{{github}}</a>
+                                    </li>
+                                    <li><a href="{{website}}"><span class="fa-container text-center mr-2"><i
+                                                    class="fas fa-globe"></i></span>{{website}}</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="resume-body p-5">
+                    <section class="resume-section summary-section mb-5">
+                        <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Summary</h2>
+                        <div class="resume-section-content">
+                            {% for s in summary %}
+                                {{s | safe}}
+                            {% endfor %}
+                        </div>
+                    </section>
+                    <div class="row">
+                        <!-- Work Experience (Left Columns) -->
+                        <div class="col-lg-9">
+                            <section class="resume-section experience-section mb-5">
+                                <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Work
+                                    Experience</h2>
+                                <div class="resume-section-content">
+                                    <div class="resume-timeline position-relative">
+                                        <article class="position-relative pb-3">
+                                            <!-- resume-timeline-item -->
+                                            {% for w in work_exp %}
+                                            <div class="resume-timeline-item-header mb-2">
+                                                <div class="d-flex flex-column flex-md-row">
+                                                    <h3 class="resume-position-title font-weight-bold mb-1">{{w[0]}} -
+                                                        {{w[1]}}
+                                                    </h3>
+                                                    <div class="resume-company-name ml-auto"></div>
+                                                </div>
+                                                <div class="resume-position-time">{{w[2]}}</div>
+                                            </div>
+                                            <div class="resume-timeline-item-desc">
+                                                <h4 class="resume-timeline-item-desc-heading font-weight-bold">
+                                                </h4>
+                                                <ul>
+                                                    {% for p in w[4]['points'] %}
+                                                    <li>{{p}}</li>
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+                                            {% endfor %}
+                                        </article>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="resume-section experience-section mb-5">
+                                <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Data Science
+                                    Projects</h2>
+                                <div class="resume-section-content">
+                                    <div class="resume-timeline position-relative">
+                                        <article class="position-relative pb-3">
+                                            <!-- resume-timeline-item -->
+                                            {% for d in ds_projects %}
+                                            <div class="resume-timeline-item-header mb-2">
+                                                <div class="d-flex flex-column flex-md-row">
+                                                    <h3 class="resume-position-title font-weight-bold mb-1">{{d}}
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="resume-timeline-item-desc">
+                                                <h4 class="resume-timeline-item-desc-heading font-weight-bold">
+                                                </h4>
+                                                <ul>
+                                                    {% for i in ds_projects[d] %}
+                                                    <li>{{i}}</li>
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+                                            {% endfor %}
+                                        </article>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <!-- Others (Right Columns) -->
+                        <div class="col-lg-3">
+                            <section class="resume-section skills-section mb-5">
+                                <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Skills</h2>
+                                <div class="resume-section-content">
+                                    <div class="resume-skill-item">
+                                        {% for s in skill_list %}
+                                        <h4 class="resume-skills-cat font-weight-bold"> {{s}} </h4>
+                                        <ul class="list-unstyled mb-4">
+                                            {% for sk, pct in skill_list[s] %}
+                                            <li class="mb-2">
+                                                <div class="resume-skill-name"> {{ sk }} </div>
+                                                <div class="progress resume-progress">
+                                                    <div class="progress-bar theme-progress-bar-dark" role="progressbar"
+                                                        style="width: {{ pct }}%" aria-valuenow="25" aria-valuemin="0"
+                                                        aria-valuemax="100"></div>
+                                                </div>
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="resume-section education-section mb-5">
+                                <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
+                                    Education
+                                </h2>
+                                <div class="resume-section-content">
+                                    <ul class="list-unstyled">
+                                        {% for edu, edu_loc, edu_yr in education_list %}
+                                        <li>
+                                            <div class="resume-degree font-weight-bold"> {{ edu }} </div>
+                                            <div class="resume-degree-org"> {{ edu_loc }} </div>
+                                            <div class="resume-degree-time"> {{ edu_yr }} </div>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="resume-section language-section mb-5">
+                                <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
+                                    Language</h2>
+                                <div class="resume-section-content">
+                                    <ul class="list-unstyled resume-lang-list">
+                                        {% for lg, pct in language_list %}
+                                        <li class="mb-2"><span class="resume-lang-name font-weight-bold">
+                                                {{ lg }}
+                                            </span> <small class="text-muted font-weight-normal">( {{ pct}}
+                                                )</small>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="resume-section interests-section mb-5">
+                                <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">
+                                    Interests
+                                </h2>
+                                <div class="resume-section-content">
+                                    <ul class="list-unstyled">
+                                        {% for interest in interest_list %}
+                                        <li class="mb-1"> {{ interest }} </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+        </article>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <!-- <script src="/static/js/main.js"></script>  -->
+    {% if not contact %}
+    <script src="/static/js/main.js"></script>
+    {% endif %}
+</body>
+
+</html>
