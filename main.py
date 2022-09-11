@@ -65,4 +65,5 @@ async def serve_pdf(request: Request, contact:bool=False):
         pdf_file = FileResponse(path=pdf_filepath, filename=f'{vars["name"]}_{dt}.pdf')	
     except:
         pdf_file = 'file not found'
+    os.remove(pdf_filepath)
     return pdf_file
