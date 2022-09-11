@@ -25,6 +25,12 @@ templates = Jinja2Templates(directory="templates")
 
 @ app.get("/")
 async def index(request: Request, contact:bool=False):
+    try:
+        filename = 'Resume'
+        pdf_filepath = f'{filename}.pdf'
+        os.remove(pdf_filepath)
+    except:
+        print('file don exist')
     vars = json.load(open("vars.json"))
     return templates.TemplateResponse("resume.html", context={'request':request, **vars, 'contact':contact})
 
