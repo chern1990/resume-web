@@ -31,12 +31,10 @@ async def index(request: Request, contact:bool=False):
 
 @app.get("/pdf")
 async def serve_pdf(request: Request, contact:bool=False):
-    hostname = 'http://www.google.com'	
-    filename = 'ResumeTest'
-    pdf_filepath = f'{filename}.pdf'
-    html_filepath = f'{filename}.html'
-
-    urllib.request.urlretrieve(hostname, html_filepath)
+    hostname = 'http://yeechern.ddns.net'	
+    filename = 'Resume'
+    pdf_filepath = f'./{filename}.pdf'
+    # html_src = requests.get(hostname).text
 
     vars = json.load(open("vars.json"))
 
@@ -44,7 +42,8 @@ async def serve_pdf(request: Request, contact:bool=False):
         print('Generate PDF')
         pdf = await pyppdf.main(
                 output_file = pdf_filepath,
-                html = html_filepath,
+                url = hostname,
+                # html = html_src,
                 args={'pdf':{'format':'A4',
                                     'printBackground':True,
                                     'margin':{'top':'0.5in',
@@ -53,23 +52,7 @@ async def serve_pdf(request: Request, contact:bool=False):
                                                 'left':'0.0in'}
                                     }
                             }
-                )            
-#         host = 'http://127.0.0.1:8000'
-#         # host = vars['website']
-#         page_url = f'{host}/?contact={contact}'
-#         pdf = await pyppdf.main(
-#             output_file=f'{resume_filepath}',
-#             url=page_url,
-#             args={'pdf':{'format':'A4',
-#                                 'printBackground':True,
-#                                 'margin':{'top':'0.5in',
-#                                             'right':'0.0in',
-#                                             'bottom':'0.5in',
-#                                             'left':'0.0in'}
-#                                 }
-#                         }
-#             )
-
+                ) 
     dt = datetime.datetime.now().strftime('%Y%m%d')
     try:
         pdf_file = FileResponse(path=pdf_filepath, filename=f'{vars["name"]}_{dt}.pdf')	
