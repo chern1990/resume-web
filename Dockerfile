@@ -1,6 +1,6 @@
 FROM python:3.9.13
 
-RUN apt-get install chromium-chromedriver
+RUN apt-get update
 
 COPY . /src
 COPY ./requirements.txt /src/requirements.txt
