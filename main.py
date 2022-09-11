@@ -8,6 +8,7 @@ from fastapi.responses import FileResponse, HTMLResponse
 import subprocess
 import datetime, time
 import os
+import urllib.request
 import pyppdf
 
 def ping_web(host):
@@ -30,6 +31,8 @@ async def index(request: Request, contact:bool=False):
 
 @app.get("/pdf")
 async def serve_pdf(request: Request, contact:bool=False):
+    urllib.request.urlretrieve("http://yeechern.ddns.net", "Resume.html")
+    
     vars = json.load(open("vars.json"))
     resume_filepath = 'Resume.pdf'
 
