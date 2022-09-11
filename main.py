@@ -71,7 +71,6 @@ async def serve_pdf(request: Request, contact:bool=False):
     dt = datetime.datetime.now().strftime('%Y%m%d')
     try:
         pdf_file = FileResponse(path=pdf_filepath, filename=f'{vars["name"]}_{dt}.pdf')	
-        os.remove(pdf_filepath)
     except:
         pdf_file = 'file not found'
     
