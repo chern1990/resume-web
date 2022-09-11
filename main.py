@@ -64,12 +64,15 @@ async def serve_pdf(request: Request, contact:bool=False):
     wait_cnt = 0
     while wait_cnt<10:
         print('wait count:',wait_cnt)
+        time.sleep(5)
         wait_cnt = 10 if os.path.exists(pdf_filepath) else wait_cnt+1
+        
     
     dt = datetime.datetime.now().strftime('%Y%m%d')
     try:
         pdf_file = FileResponse(path=pdf_filepath, filename=f'{vars["name"]}_{dt}.pdf')	
+        os.remove(pdf_filepath)
     except:
         pdf_file = 'file not found'
-    os.remove(pdf_filepath)
+    
     return pdf_file
