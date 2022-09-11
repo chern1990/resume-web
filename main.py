@@ -25,9 +25,6 @@ templates = Jinja2Templates(directory="templates")
 
 @ app.get("/")
 async def index(request: Request, contact:bool=False):
-    hostname='http://www.google.com'
-    html_filepath='Test.html'
-    urllib.request.urlretrieve(hostname, html_filepath)
     vars = json.load(open("vars.json"))
     return templates.TemplateResponse("resume.html", context={'request':request, **vars, 'contact':contact})
 
@@ -75,7 +72,7 @@ async def serve_pdf(request: Request, contact:bool=False):
 
     dt = datetime.datetime.now().strftime('%Y%m%d')
     try:
-        pdf_file = FileResponse(path=resume_filepath, filename=f'{vars["name"]}_{dt}.pdf')	
+        pdf_file = FileResponse(path=pdf_filepath, filename=f'{vars["name"]}_{dt}.pdf')	
     except:
         pdf_file = 'file not found'
     return pdf_file
