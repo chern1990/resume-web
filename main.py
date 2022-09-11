@@ -50,8 +50,15 @@ async def serve_pdf(request: Request, contact:bool=False):
                                                 'right':'0.0in',
                                                 'bottom':'0.5in',
                                                 'left':'0.0in'}
-                                    }
-                            }
+                                    },
+                      'launch':{'args':[
+                                        '--no-sandbox',                                        
+                                        '--single-process',
+                                        '--disable-dev-shm-usage',
+                                        '--disable-gpu',
+                                        '--no-zygote'
+                                ]}
+                      }
                 ) 
     dt = datetime.datetime.now().strftime('%Y%m%d')
     try:
@@ -59,5 +66,3 @@ async def serve_pdf(request: Request, contact:bool=False):
     except:
         pdf_file = 'file not found'
     return pdf_file
-
-    
