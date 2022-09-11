@@ -5,11 +5,11 @@ COPY ./requirements.txt /src/requirements.txt
 
 WORKDIR src
 
-ENV PORT ${PORT}
+ENV PORT 8000
 ENV HOST "0.0.0.0"
 
-EXPOSE ${PORT}:${PORT}
+EXPOSE 8000:8000
 
 RUN pip install -r requirements.txt
 
-CMD [ "uvicorn", "main:app" ]
+CMD [ "uvicorn", "main:app", "--host=0.0.0.0", "--port=${PORT}" ]
