@@ -17,7 +17,7 @@ def ping_web(host):
     return None 
 
 
-app = FastAPI()
+app = FastAPI(host='0.0.0.0', port=8000)
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
