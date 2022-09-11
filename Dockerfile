@@ -35,5 +35,6 @@ ENV HOST "0.0.0.0"
 EXPOSE 8000:8000
 
 RUN pip install -r requirements.txt
+RUN pyppdf-install
 
 CMD uvicorn main:app --host=0.0.0.0 --port=${PORT:-5000}
