@@ -33,7 +33,7 @@ async def index(request: Request, contact:bool=False):
 async def serve_pdf(request: Request, contact:bool=False):
     hostname = 'http://yeechern.ddns.net'	
     filename = 'Resume'
-    pdf_filepath = f'./{filename}.pdf'
+    pdf_filepath = f'{filename}.pdf'
     # html_src = requests.get(hostname).text
 
     vars = json.load(open("vars.json"))
