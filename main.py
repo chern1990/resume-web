@@ -52,7 +52,11 @@ async def serve_pdf(request: Request, contact:bool=False):
                                                 'left':'0.0in'}
                                     },
                       'launch':{'args':[
-                                        '--no-sandbox'
+                                        '--no-sandbox',                                        
+                                        '--single-process',
+                                        '--disable-dev-shm-usage',
+                                        '--disable-gpu',
+                                        '--no-zygote'
                                 ]}
                       }
                 ) 
