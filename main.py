@@ -42,7 +42,7 @@ async def serve_pdf(request: Request, contact:bool=False):
 
     if not os.path.exists(pdf_filepath):
         print('Generate PDF')
-        pdf = await pyppdf.main(
+        pdf = pyppdf.main(
                 output_file = pdf_filepath,
                 html = html_filepath,
                 args={'pdf':{'format':'A4',
