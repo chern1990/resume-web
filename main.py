@@ -37,21 +37,22 @@ async def serve_pdf(request: Request, contact:bool=False):
     resume_filepath = 'Resume.pdf'
 
     if not os.path.exists('Resume.pdf'):
-        host = 'http://127.0.0.1:8000'
-        # host = vars['website']
-        page_url = f'{host}/?contact={contact}'
-        pdf = await pyppdf.main(
-            output_file=f'{resume_filepath}',
-            url=page_url,
-            args={'pdf':{'format':'A4',
-                                'printBackground':True,
-                                'margin':{'top':'0.5in',
-                                            'right':'0.0in',
-                                            'bottom':'0.5in',
-                                            'left':'0.0in'}
-                                }
-                        }
-            )
+        print('Generate PDF')
+#         host = 'http://127.0.0.1:8000'
+#         # host = vars['website']
+#         page_url = f'{host}/?contact={contact}'
+#         pdf = await pyppdf.main(
+#             output_file=f'{resume_filepath}',
+#             url=page_url,
+#             args={'pdf':{'format':'A4',
+#                                 'printBackground':True,
+#                                 'margin':{'top':'0.5in',
+#                                             'right':'0.0in',
+#                                             'bottom':'0.5in',
+#                                             'left':'0.0in'}
+#                                 }
+#                         }
+#             )
 
     dt = datetime.datetime.now().strftime('%Y%m%d')
     try:
