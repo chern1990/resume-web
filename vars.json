@@ -160,7 +160,7 @@
                 "95"
             ],
             [
-                "Deep Learning (Tensorflow)",
+                "Deep Learning (Tensorflow/Pytorch)",
                 "95"
             ],
             [
@@ -172,12 +172,12 @@
                 "95"
             ],
             [
-                "NLP",
-                "93"
+                "NLP/LLM/Transformers",
+                "95"
             ],
             [
                 "Git/Version Control",
-                "90"
+                "95"
             ],            [
                 "Project Management",
                 "90"
