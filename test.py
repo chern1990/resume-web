@@ -1,4 +1,5 @@
-
+import pyppdf
+import os
 import asyncio, json
 
 async def serve_pdf():
