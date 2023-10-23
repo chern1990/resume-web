@@ -72,7 +72,7 @@ ENV HOST "0.0.0.0"
 EXPOSE ${PORT}:${PORT}
 
 RUN pip install --no-cache-dir --upgrade -r ./requirements.txt
-RUN pyppdf-install 
+# RUN pyppdf-install 
 ENV PYTHONUNBUFFERED 1
 
 CMD uvicorn main:app --host=${HOST} --port=${PORT}
