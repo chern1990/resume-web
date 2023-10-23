@@ -1,6 +1,5 @@
 from pyppeteer import launch
 import asyncio
-
 async def main():
     browser = await launch(options={'devtools': True, 'headless': False})
     page = await browser.newPage()
