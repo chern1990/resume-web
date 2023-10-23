@@ -1,32 +1,11 @@
-import pyppdf
-import os
-import asyncio, json
+from pyppeteer import launch
+import asyncio
 
-async def serve_pdf():
-    hostname = 'http://yeechern.ddns.net'
-    filename = 'Resume'
-    pdf_filepath = f'{filename}.pdf'
+async def main():
+    browser = await launch(options={'devtools': True, 'headless': False})
+    page = await browser.newPage()
+    await page.goto('http://example.com')
+    await page.screenshot({'path': 'baidu.png'})
+    await browser.close()
 
-    if not os.path.exists(pdf_filepath):
-        print('Generate PDF')
-        pdf = await pyppdf.main(
-                output_file = pdf_filepath,
-                url = hostname,
-                # html = html_src,
-                args={'pdf':{'format':'A4',
-                                    'printBackground':True,
-                                    'margin':{'top':'0.5in',
-                                                'right':'0.0in',
-                                                'bottom':'0.5in',
-                                                'left':'0.0in'}
-                                    },
-                      'launch':{'args':[
-                                        '--no-sandbox',                                        
-                                        '--single-process',
-                                        '--disable-dev-shm-usage',
-                                        '--disable-gpu',
-                                        '--no-zygote'
-                                ]}
-                      }
-                ) 
-    
+asyncio.get_event_loop().run_until_complete(main())
