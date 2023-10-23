@@ -11,12 +11,6 @@ import os
 import urllib.request
 import pyppdf
 
-def ping_web(host):
-    print(f'Ping {host}')
-    r = requests.get(f'{host}')
-    print('Alive' if r.status_code else 'Dead')
-    return None 
-
 
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
@@ -41,7 +35,6 @@ async def serve_pdf(request: Request, contact:bool=False):
     hostname = 'http://yeechern.ddns.net'	
     filename = 'Resume'
     pdf_filepath = f'{filename}.pdf'
-    # html_src = requests.get(hostname).text
 
     vars = json.load(open("vars.json"))
 
@@ -67,13 +60,6 @@ async def serve_pdf(request: Request, contact:bool=False):
                                 ]}
                       }
                 ) 
-        
-    #wait_cnt = 0
-    #while wait_cnt<10:
-    #    print('wait count:',wait_cnt)
-    #    time.sleep(5)
-    #    wait_cnt = 10 if os.path.exists(pdf_filepath) else wait_cnt+1
-        
     
     dt = datetime.datetime.now().strftime('%Y%m%d')
     try:
