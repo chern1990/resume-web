@@ -32,7 +32,7 @@ async def index(request: Request, contact:bool=False):
 
 @app.get("/pdf")
 async def serve_pdf(request: Request, contact:bool=False):
-    hostname = 'http://yeechern.ddns.net'	
+    hostname = 'http://yeechern.ddns.net'
     filename = 'Resume'
     pdf_filepath = f'{filename}.pdf'
 
@@ -63,7 +63,7 @@ async def serve_pdf(request: Request, contact:bool=False):
     
     dt = datetime.datetime.now().strftime('%Y%m%d')
     try:
-        pdf_file = FileResponse(path=pdf_filepath, filename=f'{vars["name"]}_{dt}.pdf')	
+        pdf_file = FileResponse(path=pdf_filepath, filename=f'{vars["name"]}_{dt}.pdf')
     except:
         pdf_file = 'file not found'
     
