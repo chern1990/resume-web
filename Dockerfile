@@ -5,8 +5,7 @@ RUN apt-get install -y sudo wget gnupg2 gcc
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 RUN echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
 RUN sudo apt update 
-RUN sudo apt install google-chrome-stable
-RUN apt install libxss1
+RUN sudo apt install -y google-chrome-stable libxss1
 
 # RUN apt-get install -y sudo \
 #     gnupg2 \
