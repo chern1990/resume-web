@@ -1,7 +1,7 @@
 
 import asyncio, json
 
-async def serve_pdf(request: Request, contact:bool=False):
+async def serve_pdf():
     hostname = 'http://yeechern.ddns.net'
     filename = 'Resume'
     pdf_filepath = f'{filename}.pdf'
