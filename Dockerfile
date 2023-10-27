@@ -1,6 +1,7 @@
-FROM python:3.10
+FROM python:3.10-slim-bullseye
 RUN apt-get update
 RUN apt-get install -y sudo wget vim gcc gnupg
+RUN apt-get install -y xvfb
 
 ### Debian 11 ###
 RUN wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-2/wkhtmltox_0.12.6.1-2.bullseye_amd64.deb
