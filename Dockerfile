@@ -18,7 +18,7 @@ EXPOSE ${PORT}:${PORT}
 RUN pip install --no-cache-dir --upgrade -r ./requirements.txt
 ENV PYTHONUNBUFFERED 1
 
-CMD uvicorn main:app --host=${HOST} --port=${PORT}
+CMD uvicorn main:app --host=${HOST} --port=${PORT} --reload
 
 
 # FROM python:3.10-slim-bullseye
