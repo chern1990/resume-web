@@ -5,3 +5,4 @@ jinja2
 uvicorn
 wkhtmltopdf
 py3-wkhtmltopdf
+pdfkit
