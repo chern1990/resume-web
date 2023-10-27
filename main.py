@@ -10,6 +10,7 @@ import datetime, time
 import os
 import urllib.request
 import pdfkit
+import pyppdf
 
 
 app = FastAPI()
