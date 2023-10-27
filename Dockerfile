@@ -1,11 +1,13 @@
-FROM python:3.10-slim-bullseye
+FROM python:3.10-slim-bullseye                                                                                                   
 RUN apt-get update
 RUN apt-get install -y sudo wget vim gcc gnupg
 RUN apt-get install -y xvfb
+RUN apt-get install -y xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic
+RUN apt-get install -y wkhtmltopdf
 
-### Debian 11 ###
-RUN wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-2/wkhtmltox_0.12.6.1-2.bullseye_amd64.deb
-RUN sudo apt install -y -f ./wkhtmltox_0.12.6.1-2.bullseye_amd64.deb
+# ### Debian 11 - wkhtmlpdf ###
+# RUN wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-2/wkhtmltox_0.12.6.1-2.bullseye_amd64.deb
+# RUN sudo apt install -y -f ./wkhtmltox_0.12.6.1-2.bullseye_amd64.deb
 
 WORKDIR /code
 COPY . ./
