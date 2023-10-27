@@ -22,10 +22,13 @@ async def index(request: Request, contact:bool=False):
     vars = json.load(open("vars.json"))
     return templates.TemplateResponse("resume.html", context={'request':request, **vars, 'contact':contact})
 
+def html_to_pdf():
+    subprocess.run(['wkhtmltopdf','http://yeechern.ddns.net','Resume.pdf'])
+    
 
 @app.get("/pdf")
 async def serve_pdf(request: Request):
-    subprocess.run(['wkhtmltopdf','http://yeechern.ddns.net','Resume.pdf'])
+        html_to_pdf()
     # hostname = 'http://yeechern.ddns.net'
     # filename = 'Resume'
     # pdf_filepath = f'{filename}.pdf'
