@@ -24,7 +24,7 @@
                     "Design risk control measurements and develop end to end automated pipeline for near realtime metric monitoring to enable quick response against spam/fraudster within TikTok Live ecosystem.",
 			        "Perform in depth user behaviour analytics to identify potential signals that can be engineered into features for ML model.",
                     "Reduces TikTok Live ecosystem risk and fraud by >70% with a combination of multiple high precision ML models and risk control strategies.",
-                    "Develop and deployed realtime behavioural sequence LSTM model that successfully mitigate >90% of scam cases on TikTok Live ecosystem.",
+                    "Develop and deployed realtime behavioural sequence model that successfully mitigate >90% of scam cases on TikTok Live ecosystem.",
                     "Collaborate with XFN such as Trust & Safety team to ensure business risk are not propogated outside of TikTok Live ecosystem.",
                     "Mentored and coached new junior data scientist to ensure seamless onboarding process, resulting in an average 50% performance improvement in a month."
                 ]
