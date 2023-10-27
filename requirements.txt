@@ -6,3 +6,4 @@ uvicorn
 wkhtmltopdf
 py3-wkhtmltopdf
 pdfkit
+pyppdf
