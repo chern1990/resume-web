@@ -39,7 +39,7 @@ async def serve_pdf(request: Request):
     # 'margin-bottom': '0.5in',
     # 'margin-left': '0.0in'
     # }
-    # pdf = pdfkit.from_url('http://yeechern.ddns.net', pdf_filepath, options=options)
+    # pdf = await pdfkit.from_url('http://yeechern.ddns.net', pdf_filepath, options=options)
 
     pdf = await pyppdf.main(
             output_file = pdf_filepath,
