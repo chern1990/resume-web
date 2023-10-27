@@ -41,7 +41,6 @@ async def serve_pdf(request: Request):
     # 'margin-left': '0.0in'
     # }
     # pdf = pdfkit.from_url('http://yeechern.ddns.net', pdf_filepath, options=options)
-    
     vars = json.load(open("vars.json"))
 #     if not os.path.exists(pdf_filepath):
 #         print('Generate PDF')
@@ -66,10 +65,10 @@ async def serve_pdf(request: Request):
 #                       }
 #                 ) 
     
-    # dt = datetime.datetime.now().strftime('%Y%m%d')
-    # try:
-    #     pdf_file = FileResponse(path=pdf_filepath, filename=f'{vars["name"]}_{dt}.pdf')
-    # except:
-    #     pdf_file = 'file not found'
+    dt = datetime.datetime.now().strftime('%Y%m%d')
+    try:
+        pdf_file = FileResponse(path=pdf_filepath, filename=f'{vars["name"]}_{dt}.pdf')
+    except:
+        pdf_file = 'file not found'
     
-    # return pdf_file
+    return pdf_file
