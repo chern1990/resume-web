@@ -23,12 +23,11 @@ async def index(request: Request, contact:bool=False):
     return templates.TemplateResponse("resume.html", context={'request':request, **vars, 'contact':contact})
 
 def html_to_pdf():
-    subprocess.run(['wkhtmltopdf','http://yeechern.ddns.net','Resume.pdf'])
-    
+    subprocess.run(['wkhtmltopdf','http://localhost:80','Resume.pdf'])
 
 @app.get("/pdf")
 async def serve_pdf(request: Request):
-        html_to_pdf()
+    html_to_pdf()
     # hostname = 'http://yeechern.ddns.net'
     # filename = 'Resume'
     # pdf_filepath = f'{filename}.pdf'
@@ -42,9 +41,8 @@ async def serve_pdf(request: Request):
     # 'margin-left': '0.0in'
     # }
     # pdf = pdfkit.from_url('http://yeechern.ddns.net', pdf_filepath, options=options)
-    return 'done'
     
-    # vars = json.load(open("vars.json"))
+    vars = json.load(open("vars.json"))
 #     if not os.path.exists(pdf_filepath):
 #         print('Generate PDF')
 #         pdf = await pyppdf.main(
