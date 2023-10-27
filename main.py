@@ -9,7 +9,6 @@ import subprocess
 import datetime, time
 import os
 import urllib.request
-import pyppdf
 
 
 app = FastAPI()
