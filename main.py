@@ -22,16 +22,14 @@ async def index(request: Request, contact:bool=False):
     vars = json.load(open("vars.json"))
     return templates.TemplateResponse("resume.html", context={'request':request, **vars, 'contact':contact})
 
-def html_to_pdf():
-    subprocess.run(['wkhtmltopdf','http://localhost:80','Resume.pdf'])
 
 @app.get("/pdf")
 async def serve_pdf(request: Request):
-    html_to_pdf()
-    # hostname = 'http://yeechern.ddns.net'
-    # filename = 'Resume'
-    # pdf_filepath = f'{filename}.pdf'
-
+    hostname = 'http://yeechern.ddns.net'
+    filename = 'Resume'
+    pdf_filepath = f'{filename}.pdf'
+    vars = json.load(open("vars.json"))
+    
     # options = {
     # 'page-size': 'A4',
     # 'width':,
@@ -41,29 +39,23 @@ async def serve_pdf(request: Request):
     # 'margin-left': '0.0in'
     # }
     # pdf = pdfkit.from_url('http://yeechern.ddns.net', pdf_filepath, options=options)
-    vars = json.load(open("vars.json"))
-#     if not os.path.exists(pdf_filepath):
-#         print('Generate PDF')
-#         pdf = await pyppdf.main(
-#                 output_file = pdf_filepath,
-#                 url = hostname,
-#                 # html = html_src,
-#                 args={'pdf':{'format':'A4',
-#                                     'printBackground':True,
-#                                     'margin':{'top':'0.5in',
-#                                                 'right':'0.0in',
-#                                                 'bottom':'0.5in',
-#                                                 'left':'0.0in'}
-#                                     },
-#                       'launch':{'args':[
-#                                         '--no-sandbox',                                        
-#                                         '--single-process',
-#                                         '--disable-dev-shm-usage',
-#                                         '--disable-gpu',
-#                                         '--no-zygote'
-#                                 ]}
-#                       }
-#                 ) 
+
+    pdf = await pyppdf.main(
+            output_file = pdf_filepath,
+            url = hostname,
+            args={'pdf':{'format':'A4',
+                         'printBackground':True,
+                         'margin':{'top':'0.5in',
+                                   'right':'0.0in',
+                                   'bottom':'0.5in',
+                                   'left':'0.0in'}},
+                  'launch':{'args':[
+                                    '--no-sandbox',                                        
+                                    '--single-process',
+                                    '--disable-dev-shm-usage',
+                                    '--disable-gpu',
+                                    '--no-zygote'
+                            ]}}) 
     
     dt = datetime.datetime.now().strftime('%Y%m%d')
     try:
