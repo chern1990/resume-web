@@ -1,6 +1,7 @@
 FROM python:3.10-slim-bullseye                                                                                                   
 RUN apt-get update
-RUN apt-get install -y sudo wget vim gcc gnupg
+RUN apt-get install -y sudo vim 
+# gcc gnupg
 # RUN apt-get install -y xvfb
 # RUN apt-get install -y xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic
 # RUN apt-get install -y wkhtmltopdf
