@@ -2,8 +2,5 @@ requests
 fastapi
 fastapi_utils
 jinja2
-uvicorn
-wkhtmltopdf
-py3-wkhtmltopdf
-pdfkit
+uvicor
 pyppdf
