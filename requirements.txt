@@ -2,5 +2,5 @@ requests
 fastapi
 fastapi_utils
 jinja2
-uvicor
+uvicorn
 pyppdf
