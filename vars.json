@@ -13,9 +13,23 @@
         "<p>I have helped multiple Telco/Tech company in translating big & unstructured data into <strong>actionable insights</strong> and leverage <strong>data science and machine learning</strong> to solve real business challenges. (eg: churn prediction, customer segmentation, spam/fraud detection, behavioural sequence learning, etc.)</p>"],
     "work_exp": [
         [
-            "Data Scientist",
+            "Lead Data Scientist",
+            "DBS (Singapore)",
+            "Apr 2023 - Present",
+            "",
+            {
+                "title": "Key Achievements",
+                "points": [
+                    "Lead the AIOps iniviative for Infrastructure SRE Technology Services team, responsible to scope for AI/ML projects, develop and deliver project to mainframe SME team",
+                    "Developed anomaly detection and root cause analysis tool for CICS mainframe SME team. Enables AI assisted investigation during incident or post-mortem analysis.",
+			        "Developed mainframe batch job completion time prediction tool. Leverages knowledge graph to detect dependancy path, critical path and predict new batch completion time. Allows early detection of delay in batch jobs that can cause delay in daily branch operations."
+                ]
+            }
+        ],
+        [
+            "Senior Data Scientist",
             "Bytedance (Singapore)",
-            "Nov 2021 - Present",
+            "Nov 2021 - Apr 2023",
             "As a data scientist in Bytedance business risk control team, I am responsible to develop rules, algorithm or ML models to minimize the damage of inauthentic behaviours on Bytedance platforms.",
             {
                 "title": "Key Achievements",
@@ -26,7 +40,7 @@
                     "Reduces TikTok Live ecosystem risk and fraud by >70% with a combination of multiple high precision ML models and risk control strategies.",
                     "Develop and deployed realtime behavioural sequence model that successfully mitigate >90% of scam cases on TikTok Live ecosystem.",
                     "Collaborate with XFN such as Trust & Safety team to ensure business risk are not propogated outside of TikTok Live ecosystem.",
-                    "Mentored and coached new junior data scientist to ensure seamless onboarding process, resulting in an average 50% performance improvement in a month."
+                    "Mentored and coached new junior data scientist to ensure seamless onboarding process."
                 ]
             }
         ],
@@ -90,8 +104,7 @@
                 "points": [
                     "Utilized geospatial analysis tools and successfully pin point focus areas and reduce more than 25% of regional customer complain after new site, re-engineering and RF optimization efforts.",
                     "Successfully deploy mobile coverage vehicle (MCV) for special events such as Formula 1 and Moto GP. Implemented necessary optimization mitigation strategy to achieve zero congestion throughout the event.",
-                    "Improved major highway coverage and quality to achieve zero drop call.",
-                    "Achieved regional lowest capacity hotspots after bi-sector upgrades, LTE integration and RF optimization."
+                    "Improved major highway coverage and quality to achieve zero drop call. Achieved regional lowest capacity hotspots after bi-sector upgrades, LTE integration and RF optimization."
                 ]
             }
         ]
