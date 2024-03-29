@@ -1,0 +1,226 @@
+{
+    "resume_title": "Data Scientist | Engineer | Programmer",
+    "name": "Goh Yee Chern",
+    "job_desc": "Data Scientist | Engineer | Programmer",
+    "email": "chern1990@gmail.com",
+    "mobile": "+65-90117773 / +60-122771116",
+    "linkedin": "https://www.linkedin.com/in/yee-chern-goh",
+    "github": "https://github.com/chern1990",
+    "website": "http://yeechern.ddns.net",
+    "summary": [
+        "<p>I am a professional with extensive experience in <strong>data analytics, data science, machine learning, data storytelling and visualizations</strong>.</p>",
+        "<p>I am well versed in various data science programming languages such as <strong>Python, SQL, Pyspark and HiveQL</strong>.</p>",
+        "<p>I have helped multiple Telco/Tech company in translating big & unstructured data into <strong>actionable insights</strong> and leverage <strong>data science and machine learning</strong> to solve real business challenges. (eg: churn prediction, customer segmentation, spam/fraud detection, behavioural sequence learning, etc.)</p>"],
+    "work_exp": [
+        [
+            "Lead Data Scientist",
+            "DBS (Singapore)",
+            "Apr 2023 - Mar 2024",
+            "",
+            {
+                "title": "Key Achievements",
+                "points": [
+                    "Lead the AIOps iniviative for Infrastructure SRE team, responsible to scope for AI/ML projects, develop and deliver project to mainframe SME team",
+                    "Developed anomaly detection and root cause analysis tool for CICS mainframe SME team. Enables AI assisted investigation during incident or post-mortem analysis.",
+			        "Developed mainframe batch job completion time prediction tool. Leverages knowledge graph to detect dependancy path, critical path and predict new batch completion time. Allows early detection of delay in batch jobs that can cause delay in daily branch operations."
+                ]
+            }
+        ],
+        [
+            "Senior Data Scientist",
+            "Bytedance (Singapore)",
+            "Nov 2021 - Apr 2023",
+            "As a data scientist in Bytedance business risk control team, I am responsible to develop rules, algorithm or ML models to minimize the damage of inauthentic behaviours on Bytedance platforms.",
+            {
+                "title": "Key Achievements",
+                "points": [
+                    "Build complex rules, algorithms and ML models to respond and mitigate business risk in TikTok Live ecosystem, these risk includes but not limited mallicious redirection, spam, scam and fraud on the platform",
+                    "Design risk control measurements and develop end to end automated pipeline for near realtime metric monitoring to enable quick response against spam/fraudster within TikTok Live ecosystem.",
+			        "Perform in depth user behaviour analytics to identify potential signals that can be engineered into features for ML model.",
+                    "Reduces TikTok Live ecosystem risk and fraud by >70% with a combination of multiple high precision ML models and risk control strategies.",
+                    "Develop and deployed realtime behavioural sequence model that successfully mitigate >90% of scam cases on TikTok Live ecosystem.",
+                    "Collaborate with XFN such as Trust & Safety team to ensure business risk are not propogated outside of TikTok Live ecosystem.",
+                    "Mentored and coached new junior data scientist to ensure seamless onboarding process."
+                ]
+            }
+        ],
+        [
+            "Data Science Strategist",
+            "Facebook (Singapore)",
+            "Nov 2019 - Jun 2021",
+            "As a data scientist at Facebook Connectivity, my main responsibilities is to leverage various data sources to provide actionable insights for mobile partners and bring more people to a faster internet.",
+            {
+                "title": "Key Achievements",
+                "points": [
+                    "Lead partnership programs with mobile operator partners using data analytics and various tools that help them transform their networks and infrastructure.",
+                    "Lead APAC network planning go to market engagements, helping partners to deploy mobile cell towers or fiber efficiently.",
+                    "Build data pipelines that automates monthly analytics report for telco partners.",
+                    "Leverage ML prediction/classification models to support partner engagements.",
+                    "Leverage visualization and mapping tools to conduct analysis, ultimately recommend infrastructure expansion to partners."
+                ]
+            }
+        ],
+        [
+            "Data Scientist",
+            "AIA (Malaysia)",
+            "Oct 2018 - Oct 2019",
+            "Responsible in performing advance data mining, statistical analysis and building various machine learning models that are able to solve various business problems across divisions.",
+            {
+                "title": "Key Achievements",
+                "points": [
+                    "Productionize multiple machine learning models. Fully automated model (re)training, validation and scoring.",
+                    "Created new churn prediction model to support marketing campaign, model achieved 3x lift.",
+                    "Perform text mining/NLP algorithms to extract valueable insights.",
+                    "Automate address geocoding and developed innovative customer-to-agent allocation algorithm.",
+                    "Mentor and assist junior data scientist in various projects."
+                ]
+            }
+        ],
+        [
+            "Network Data Analyst",
+            "Digi Telecommunications (Malaysia)",
+            "Sep 2016 - Sep 2018",
+            "Responsible in detail network centralised analysis and optimisation to provide best quality of experience to mobile subscribers.",
+            {
+                "title": "Key Achivements",
+                "points": [
+                    "Develop smart network investment framework via continuous collaboration with Marketing and Data Science team. Build churn and NPS prediction model to maximize ROI of network investment and enables prioritization based on business needs.",
+                    "Implement new network optimization strategy and feature trials to ensure network performance is on par or better than competitors. Improves user download throughput by 20%.",
+                    "Collaborate with marketing Data Science team to develop innovate solutions such as traffic forecast, congesition prediction model that improves network investment decisions."
+                ]
+            }
+        ],
+        [
+            "Regional RF Engineer",
+            "Maxis (Malaysia)",
+            "Apr 2014 - Sep 2016",
+            "Responsible in radio planning and optimization to improve all GSM technologies (2G/3G/LTE) in assigned region.",
+            {
+                "title": "Key Achievements",
+                "points": [
+                    "Utilized geospatial data analysis tools and successfully pin point focus areas and reduce more than 25% of regional customer complain after new site, re-engineering and RF optimization efforts.",
+                    "Successfully deploy mobile coverage vehicle (MCV) for special events such as Formula 1 and Moto GP. Implemented necessary optimization mitigation strategy to achieve zero congestion throughout the event.",
+                    "Improved major highway coverage and quality to achieve zero drop call. Achieved regional lowest capacity hotspots after bi-sector upgrades, LTE integration and RF optimization."
+                ]
+            }
+        ]
+    ],
+    "ds_projects": {
+        "TikTok Live Chat - User Behavioural Sequence Model": [
+            "Develop LSTM deep learning model that predicts suspicious user on TikTok Live platform by learning on multiple series of user behaviour sequence embeddings. (eg: action sequence, time difference sequence, IP address sequence, etc.)"
+        ],
+        "TikTok Live Chat - Spam Classifaction Model": [
+            "Leverages user behaviour statistics on TikTok Live platform to develop XGB classification model that predict spam chats and enforce punishments on TikTok Live."
+        ],
+        "Telco Customer Churn Prediction Model": [
+            "Combining user demographics, usage behaviour, user experience and mobile network performance, created a GDBT classification model that predicts user churn propensity."
+        ],
+        "Mobile Network Site Traffic Forecast & Upcoming Out-of-Capacity Prediction.": [
+            "Using time series forecasting algorithms, forecast traffic growth and create a prediction model that predicts site being out of capacity within next 3 months. Enable MNOs to plan their solutions ahead of time."
+        ],
+        "Upsell Campaign Takeup Prediction Model": [
+            "Combining user demographics, purchase/payment/claim history, created a GDBT classification model that predicts campaign takeup propensity. This enables data science team to help campaign team in selection of leads for upcoming campaign."
+        ],
+        "Call Center/Email NLP : Topic Modeling, Sentiment Analysis, Process Automation": [
+            "Conduct sentiment analysis based on call center case description & email content and created a sentiment classification model using transformer model.",
+            "Using regular expression, automate keyword/address/coordinates extraction from case & email content. Automate geocoding of addresses to coordinates and creating of spatial heatmaps using Leaflet library."
+        ]
+    },
+    "education_list": [
+        [
+            "Bachelor of Engineering in Electronics & Comm. System",
+            "Australian National University",
+            "2011 - 2012"
+        ],
+        [
+            "Diploma in Electrical & Electronics Engineering",
+            "Inti College Subang Jaya",
+            "2008 - 2010"
+        ]
+    ],
+    "skill_list": {
+        "Data Science & Analytics": [
+            [
+                "Python/R/ORE/SQL/Hive",
+                "95"
+            ],
+            [
+                "Advanced Data Analytics",
+                "95"
+            ],
+            [
+                "Machine Learning",
+                "95"
+            ],
+            [
+                "Pyspark/MLib",
+                "95"
+            ],
+            [
+                "Deep Learning (Tensorflow/Pytorch)",
+                "95"
+            ],
+            [
+                "NLP/LLM/Transformers",
+                "95"
+            ],
+            [
+                "Kafka",
+                "95"
+            ],	
+            [
+                "Geospatial Analytics",
+                "95"
+            ],
+            [
+                "Tableau/Qlik",
+                "95"
+            ],
+            [
+                "RPA",
+                "95"
+            ],
+            [
+                "Git/Version Control",
+                "95"
+            ],            [
+                "Project Management",
+                "90"
+            ],
+            [
+                "AWS/GCP/Oracle Cloud/Heroku",
+                "90"
+            ],
+            [
+                "Recommender System",
+                "88"
+            ]
+        ]
+    },
+    "language_list": [
+        [
+            "English",
+            "Fluent"
+        ],
+        [
+            "Mandarin",
+            "Native"
+        ],
+        [
+            "Cantonese",
+            "Fluent"
+        ],
+        [
+            "Malay",
+            "Professional Working"
+        ]
+    ],
+    "interest_list": [
+        "Data Analytics",
+        "Data Science",
+        "Automation",
+        "Robotics",
+        "Artificial Intelligence",
+        "Open Source"
+    ]
+}
