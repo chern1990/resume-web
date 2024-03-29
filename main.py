@@ -20,7 +20,7 @@ templates = Jinja2Templates(directory="templates")
 
 @ app.get("/")
 async def index(request: Request, contact:bool=False):
-    vars = json.load(open("vars.json"))
+    vars = json.load(open("/json/vars.json"))
     return templates.TemplateResponse("resume.html", context={'request':request, **vars, 'contact':contact})
 
 
