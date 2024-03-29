@@ -9,6 +9,7 @@ RUN apt-get install -y ca-certificates fonts-liberation libappindicator3-1 libas
 
 WORKDIR /code
 COPY . ./
+RUN rm -r ./json
 ENV PORT 8000
 ENV HOST "0.0.0.0"
 EXPOSE ${PORT}:${PORT}
@@ -18,3 +19,6 @@ RUN pyppdf-install
 ENV PYTHONUNBUFFERED 1
 
 CMD uvicorn main:app --host=${HOST} --port=${PORT} --reload
+
+# sudo docker build -t resume-web resume-web
+# sudo docker run -dp 0.0.0.0:80:8000 -v /Users/yeecherngoh/Downloads/study/projects/resume-web/json:/json resume-web
