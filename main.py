@@ -29,7 +29,7 @@ async def serve_pdf(request: Request):
     hostname = 'http://yeechern.ddns.net'
     filename = 'Resume'
     pdf_filepath = f'{filename}.pdf'
-    vars = json.load(open("vars.json"))
+    vars = json.load(open("/json/vars.json"))
     
     # options = {
     # 'page-size': 'A4',
