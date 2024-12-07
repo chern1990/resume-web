@@ -26,7 +26,7 @@ async def index(request: Request, contact:bool=False):
 
 @app.get("/pdf")
 async def serve_pdf(request: Request):
-    hostname = 'http://yeechern.ddns.net'
+    hostname = 'http://127.0.0.1:8000'
     filename = 'Resume'
     pdf_filepath = f'{filename}.pdf'
     vars = json.load(open("/json/vars.json"))
@@ -45,12 +45,12 @@ async def serve_pdf(request: Request):
             output_file = pdf_filepath,
             url = hostname,
             args={'pdf':{'format':'A4',
-                         'printBackground':True,
-                         'margin':{'top':'0.5in',
-                                   'right':'0.0in',
-                                   'bottom':'0.5in',
-                                   'left':'0.0in'}},
-                  'launch':{'args':[
+                            'printBackground':True,
+                            'margin':{'top':'0.5in',
+                                    'right':'0.0in',
+                                    'bottom':'0.5in',
+                                    'left':'0.0in'}},
+                    'launch':{'args':[
                                     '--no-sandbox',                                        
                                     '--single-process',
                                     '--disable-dev-shm-usage',
