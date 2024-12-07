@@ -121,6 +121,13 @@
         ],
         "Marketing - Upsell Campaign Takeup Prediction Model": [
             "Combining user demographics, purchase/payment/claim history, created a GDBT classification model that predicts campaign takeup propensity. Improve campaign team lead selection for upcoming campaign."
+        ],
+        "Telco - Customer Churn Prediction Model": [
+            "Combining user demographics, usage behaviour, user experience and mobile network performance, trained a GDBT classification model that predicts user churn propensity."
+        ],
+        "Call Center/Email - NLP : Topic Modeling, Sentiment Analysis": [
+            "Sentiment analysis, topic modeling/summarization based on call center case description & email content using BERT model.",
+            "Automate keyword/address/coordinates extraction using NER from case & email content."
         ]
     },
     "education_list": [
@@ -238,14 +245,5 @@
                 ]
             }
         ]
-    ],
-    "_comment_proj": {
-        "Telco - Customer Churn Prediction Model": [
-            "Combining user demographics, usage behaviour, user experience and mobile network performance, trained a GDBT classification model that predicts user churn propensity."
-        ],
-        "Call Center/Email - NLP : Topic Modeling, Sentiment Analysis": [
-            "Sentiment analysis, topic modeling/summarization based on call center case description & email content using BERT model.",
-            "Automate keyword/address/coordinates extraction using NER from case & email content."
-        ]
-    }
+    ]
 }
