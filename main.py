@@ -18,7 +18,8 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
 
-@ app.get("/")
+@app.head('/')
+@app.get('/')
 async def index(request: Request, contact:bool=False):
     vars = json.load(open("/json/vars.json"))
     return templates.TemplateResponse("resume.html", context={'request':request, **vars, 'contact':contact})
