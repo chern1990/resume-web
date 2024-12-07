@@ -10,36 +10,23 @@
     "summary": [
         "<p>I am a data professional with extensive experience in <strong>data analytics, data science, machine learning, artificial intelligence.</strong></p>",
         "<p>I am well versed in various data science essential programming languages such as <strong>Python, SQL, Pyspark and HiveQL</strong>.</p>",
-        "<p>I have developed multiple <strong>Machine Learning/Artificial Intelligence</strong> solution to tackle various business challenges. (eg: spam/fraud detection, behavioural sequence learning, Risk LLM, video classification, image clustering, etc.)</p>"],
+        "<p>I develop <strong>Machine Learning/Artificial Intelligence</strong> solution at scale to tackle various business challenges. (eg: spam/fraud detection, behavioural sequence learning, Risk LLM, video classification, image clustering, etc.)</p>"],
     "work_exp": [
         [
             "Lead Machine Learning Engineer",
             "Bytedance (Singapore)",
             "Apr 2024 - Present",
-            "As a MLE in Bytedance business risk control team, I am responsible safeguard the community health of Tiktok Local Services surface, minimize the damage of inauthentic behaviours by deploying sophisicated and state of the art risk controls.",
+            "As a lead MLE in Bytedance business risk control team, I am responsible safeguard the community health of Tiktok Local Services surface, minimize the damage of inauthentic behaviours by deploying sophisicated and state of the art risk controls.",
             {
                 "title": "Key Achievements",
                 "points": [
-                    "Lead & develop all risk control effort for new business in TikTok (LocalService).",
+                    "Lead & develop all creator & content risk control effort for TikTok new business, LocalService.",
                     "Tackle unique risk in Tiktok LocalService with SOTA algorithms and models. (LLM, GraphSage, etc)",
-			        "Increase recall of spam on ecosystem via multimodal embedding GPU-based DBSCAN clustering and graph clustering.",
-                    "Autolabel new risk in ecosystem with Tiktok risk fine tuned LLM models.",
+                    "Build the foundation spam perception capabilities for LocalService. (Leiden community, video/text content clustering, etc)",
+                    "Plan and lead team to develop spam defence capabilities for LocalService. (Real time behaviour sequence, classification models, etc)",
+                    "Leveraged and fine tuned vLLM/LLM models for various use case (sentiment analysis, relevancy prediction, review rewritting, etc.)",
                     "Collaborate with XFN to design policies and enforcement for fraudsters on Tiktok LocalService.",
-                    "Mentored and coached new junior data scientist/MLE."
-                ]
-            }
-        ],
-        [
-            "Lead Data Scientist",
-            "DBS (Singapore)",
-            "Apr 2023 - Apr 2024",
-            "",
-            {
-                "title": "Key Achievements",
-                "points": [
-                    "Lead the AIOps iniviative for Infrastructure SRE team, responsible to scope for AI/ML projects, develop and deliver project to mainframe SME team",
-                    "Developed anomaly detection and root cause analysis tool for CICS mainframe SME team. Enables AI assisted investigation during incident or post-mortem analysis.",
-			        "Developed mainframe batch job completion time prediction tool. Leverages knowledge graph to detect dependancy path, critical path and predict new batch completion time. Allows early detection of delay in batch jobs that can cause delay in daily branch operations."
+                    "Mentored and coached new junior/senior data scientist and MLE."
                 ]
             }
         ],
@@ -120,21 +107,20 @@
         ]
     ],
     "ds_projects": {
+        "TikTok - Order Reviews Relevancy and Sentiment Analysis": [
+            "Fine tuned foundation LLM model with order reviews to predict the sentiment and relevancy of reviews to merchant/POI."
+        ],
+        "TikTok - Video POI Relevancy Prediction": [
+            "Develop video content relevancy prediction model to ensure user posted content does not violate platform policy and relevant to POI location tagged. Leveraged vLLM and finetuned embedding models."
+        ],
         "TikTok - User Behavioural Sequence Model": [
             "Develop LSTM/Transformer deep learning model that predicts suspicious user on TikTok Live platform by learning on multiple series of user behaviour sequence embeddings. (eg: action sequence, time difference sequence, IP address sequence, etc.)"
         ],
         "TikTok - Spam Classifaction Model": [
             "Leverages user behaviour statistics on TikTok Live platform to develop XGB classification model that predict spam chats and enforce punishments on TikTok Live."
         ],
-        "Telco - Customer Churn Prediction Model": [
-            "Combining user demographics, usage behaviour, user experience and mobile network performance, trained a GDBT classification model that predicts user churn propensity."
-        ],
         "Marketing - Upsell Campaign Takeup Prediction Model": [
             "Combining user demographics, purchase/payment/claim history, created a GDBT classification model that predicts campaign takeup propensity. Improve campaign team lead selection for upcoming campaign."
-        ],
-        "Call Center/Email - NLP : Topic Modeling, Sentiment Analysis": [
-            "Sentiment analysis, topic modeling/summarization based on call center case description & email content using BERT model.",
-            "Automate keyword/address/coordinates extraction using NER from case & email content."
         ]
     },
     "education_list": [
@@ -236,5 +222,30 @@
         "Robotics",
         "Artificial Intelligence",
         "Open Source"
-    ]
+    ],
+    "_comment_work_exp": [
+        [
+            "Lead Data Scientist",
+            "DBS (Singapore)",
+            "Apr 2023 - Apr 2024",
+            "",
+            {
+                "title": "Key Achievements",
+                "points": [
+                    "Lead the AIOps iniviative for Infrastructure SRE team, responsible to scope for AI/ML projects, develop and deliver project to mainframe SME team",
+                    "Developed anomaly detection and root cause analysis tool for CICS mainframe SME team. Enables AI assisted investigation during incident or post-mortem analysis.",
+			        "Developed mainframe batch job completion time prediction tool. Leverages knowledge graph to detect dependancy path, critical path and predict new batch completion time. Allows early detection of delay in batch jobs that can cause delay in daily branch operations."
+                ]
+            }
+        ]
+    ],
+    "_comment_proj": {
+        "Telco - Customer Churn Prediction Model": [
+            "Combining user demographics, usage behaviour, user experience and mobile network performance, trained a GDBT classification model that predicts user churn propensity."
+        ],
+        "Call Center/Email - NLP : Topic Modeling, Sentiment Analysis": [
+            "Sentiment analysis, topic modeling/summarization based on call center case description & email content using BERT model.",
+            "Automate keyword/address/coordinates extraction using NER from case & email content."
+        ]
+    }
 }
