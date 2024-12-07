@@ -1,3 +1,4 @@
+typing-inspect
 requests
 fastapi
 fastapi_utils
