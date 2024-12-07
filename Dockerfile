@@ -13,6 +13,7 @@ RUN pip install --no-cache-dir --upgrade -r ./requirements.txt
 RUN pyppdf-install
 ENV PYTHONUNBUFFERED 1
 
+CMD cd /code
 CMD uvicorn main:app --host=${HOST} --port=${PORT} --reload
 # sudo docker build -t resume-web resume-web
 # sudo docker run -dp 0.0.0.0:80:8000 -v /Users/yeecherngoh/Downloads/study/projects/resume-web/json:/json resume-web
