@@ -66,3 +66,9 @@ async def serve_pdf(request: Request):
         pdf_file = 'file not found'
     
     return pdf_file
+
+
+@app.get("/ping")
+async def index(request: Request):
+    return {'status': 'alive'}
+
