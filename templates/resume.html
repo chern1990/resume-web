@@ -2,16 +2,6 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G5N8NQ8HF9"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-G5N8NQ8HF9');
-    </script>
-        
     <title>{{resume_title}}</title>
     <!-- Meta -->
     <meta charset="utf-8">
@@ -74,7 +64,7 @@
                 </header>
                 <div class="resume-body p-5">
                     <section class="resume-section summary-section mb-5">
-                        <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Summary</h2>
+                        <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Professional Summary</h2>
                         <div class="resume-section-content">
                             {% for s in summary %}
                                 {{s | safe}}
@@ -116,8 +106,7 @@
                                 </div>
                             </section>
                             <section class="resume-section experience-section mb-5">
-                                <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Data Science
-                                    Projects</h2>
+                                <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Key ML Projects</h2>
                                 <div class="resume-section-content">
                                     <div class="resume-timeline position-relative">
                                         <article class="position-relative pb-3">
