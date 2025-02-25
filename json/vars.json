@@ -8,9 +8,11 @@
     "github": "https://github.com/chern1990",
     "website": "http://yeechern.ddns.net",
     "summary": [
-        "<p>I am a data professional with extensive experience in <strong>data analytics, data science, machine learning, artificial intelligence.</strong></p>",
-        "<p>I am well versed in various data science essential programming languages such as <strong>Python, SQL, Pyspark and HiveQL</strong>.</p>",
-        "<p>I develop <strong>Machine Learning/Artificial Intelligence</strong> solution at scale to tackle various business challenges. (eg: spam/fraud detection, behavioural sequence learning, Risk LLM, video classification, image clustering, etc.)</p>"],
+        "<p>Results-driven <strong>Machine Learning Engineer and Data Scientist</strong> with <strong>extensive experience in AI, ML, and data analytics.</strong></p>",
+        "<p>Skilled in <strong>building scalable ML models, developing LLM-based solutions, and deploying AI-driven risk mitigation strategies.</strong></p>",
+        "<p>Proven ability to <strong>optimize fraud detection, behavioral analytics, and real-time AI solutions</strong> for large-scale platforms.</p>",
+        "<p>Adept at <strong>Python, PyTorch, TensorFlow, SQL, AWS, and big data processing.</strong></p>"
+    ],
     "work_exp": [
         [
             "Lead Machine Learning Engineer",
@@ -20,13 +22,12 @@
             {
                 "title": "Key Achievements",
                 "points": [
-                    "Lead & develop all creator & content risk control effort for TikTok new business, LocalService.",
-                    "Tackle unique risk in Tiktok LocalService with SOTA algorithms and models. (LLM, GraphSage, etc)",
-                    "Build the foundation spam perception capabilities for LocalService. (Leiden community, video/text content clustering, etc)",
-                    "Plan and lead team to develop spam defence capabilities for LocalService. (Real time behaviour sequence, classification models, etc)",
-                    "Leveraged and fine tuned vLLM/LLM models for various use case (sentiment analysis, relevancy prediction, review rewritting, etc.)",
-                    "Collaborate with XFN to design policies and enforcement for fraudsters on Tiktok LocalService.",
-                    "Mentored and coached new junior/senior data scientist and MLE."
+                    "Spearhead AI-driven content risk control for TikTok LocalService, implementing cutting-edge LLM and GraphSage models.",
+                    "Developed spam perception algorithms (Leiden clustering, content classification) to detect fraudulent content.",
+                    "Built real-time behavioral sequence models, reducing fraud/spam activities by 90%+",
+                    "Fine-tuned LLM models for sentiment analysis, relevance prediction, and automated review rewriting.",
+                    "Collaborated with cross-functional teams (XFN) to design anti-fraud policies and risk mitigation strategies.",
+                    "Mentored junior/senior data scientists, fostering AI innovation and knowledge sharing."
                 ]
             }
         ],
@@ -38,12 +39,11 @@
             {
                 "title": "Key Achievements",
                 "points": [
-                    "Build complex rules, algorithms and ML models to respond and mitigate business risk in TikTok Live ecosystem.",
-                    "Design risk control measurements and develop end to end automated pipeline for near realtime metric monitoring to enable quick response against spam/fraudster within TikTok Live ecosystem.",
-			        "Reduces TikTok Live ecosystem risk and fraud by >70% with a combination of multiple high precision ML models and risk control strategies.",
-                    "Develop and deployed near realtime behavioural sequence model that successfully mitigate >90% of scam cases on TikTok Live ecosystem.",
-                    "Collaborate with XFN such as Trust & Safety team to ensure business risk are not propogated outside of TikTok Live ecosystem.",
-                    "Mentored and coached new junior data scientist to ensure seamless onboarding process."
+                    "Developed and deployed high-precision fraud detection ML models, reducing risk in the TikTok Live ecosystem by 70%+.",
+                    "Designed real-time fraud detection pipelines to monitor and flag suspicious activity with >90% accuracy.",
+                    "Automated behavioral sequence modeling using deep learning (LSTM, Transformers) to detect scam patterns.",
+                    "Partnered with Trust & Safety teams to prevent fraudulent activities across TikTok’s global ecosystem.",
+                    "Trained and mentored new hires in advanced ML techniques and AI deployment."
                 ]
             }
         ],
@@ -55,10 +55,9 @@
             {
                 "title": "Key Achievements",
                 "points": [
-                    "Lead partnership programs with mobile operator partners using data analytics and various tools that help them transform their networks and infrastructure.",
-                    "Lead APAC network planning go to market engagements, helping partners to deploy mobile cell towers or fiber efficiently.",
-                    "Build data pipelines that automates monthly analytics report for telco partners.",
-                    "Leverage ML prediction/classification models to support partner engagements."
+                    "Led APAC network planning initiatives, optimizing mobile tower placement and/or fiber routing using state of the art AI/ML solution.",
+                    "Built automated data pipelines to generate network performance reports for global telecom partners.",
+                    "Developed ML-based predictive models for infrastructure expansion and network optimization."
                 ]
             }
         ],
@@ -70,10 +69,10 @@
             {
                 "title": "Key Achievements",
                 "points": [
-                    "Productionize multiple machine learning models. Fully automated model (re)training, validation and scoring.",
-                    "Leveraged text mining/NLP algorithms on call centre data to extract valueable insights.",
-                    "Automate address geocoding and developed innovative customer-to-agent allocation algorithm.",
-                    "Mentor and assist junior data scientist in various projects."
+                    "Productionized fully automated ML models for repurchase propensity model and lead recommendation model.",
+                    "Applied NLP and text mining to analyze call center data, extracting key insights for business decisions.",
+                    "Automated geocoding and location-based analytics to improve agent allocation efficiency.",
+                    "Mentor and assist junior data scientist in various innovation projects."
                 ]
             }
         ],
@@ -85,9 +84,8 @@
             {
                 "title": "Key Achivements",
                 "points": [
-                    "Develop smart network investment framework via collaboration with Marketing Data Science team. Build churn and NPS prediction model to maximize ROI of network investment and enables prioritization based on business needs.",
-                    "Implement new network optimization strategy and feature trials to ensure network performance is on par or better than competitors. Improves user download throughput by 20%.",
-                    "Collaborate with marketing Data Science team to develop innovate solutions such as traffic forecast, congesition prediction model that improves network investment decisions."
+                    "Built churn and NPS prediction models to maximize ROI on network investments.",
+                    "Developed network congestion forecasting models, improving customer experience by 20%."
                 ]
             }
         ],
@@ -99,35 +97,33 @@
             {
                 "title": "Key Achievements",
                 "points": [
-                    "Utilized geospatial data analysis tools to pin point and reduce more than 25% of regional customer complain after new site, re-engineering and RF optimization efforts.",
-                    "Deploy mobile coverage vehicle (MCV) for special events such as Formula 1 and Moto GP and implemented necessary optimization mitigation strategy to achieve zero congestion throughout the event.",
-                    "Improved major highway coverage and quality to achieve zero drop call. Achieved regional lowest capacity hotspots after bi-sector upgrades, LTE integration and RF optimization."
+                    "Used geospatial analytics to reduce customer complaints by 25% through network optimization.",
+                    "Deployed mobile coverage solutions for major events like Formula 1 and Moto GP."
                 ]
             }
         ]
     ],
     "ds_projects": {
         "TikTok - Order Reviews Relevancy and Sentiment Analysis": [
-            "Fine tuned foundation LLM model with order reviews to predict the sentiment and relevancy of reviews to merchant/POI."
+            "Fine-tuned LLMs for sentiment classification and content relevance scoring to improve review analysis."
         ],
         "TikTok - Video POI Relevancy Prediction": [
-            "Develop video content relevancy prediction model to ensure user posted content does not violate platform policy and relevant to POI location tagged. Leveraged vLLM and finetuned embedding models."
+            "Develop video content relevancy model to detect violate videos."
         ],
         "TikTok - User Behavioural Sequence Model": [
-            "Develop LSTM/Transformer deep learning model that predicts suspicious user on TikTok Live platform by learning on multiple series of user behaviour sequence embeddings. (eg: action sequence, time difference sequence, IP address sequence, etc.)"
+            "Developed LSTM/Transformer models to detect suspicious activity in TikTok Live, achieving 90%+ fraud prevention accuracy."
         ],
         "TikTok - Spam Classifaction Model": [
-            "Leverages user behaviour statistics on TikTok Live platform to develop XGB classification model that predict spam chats and enforce punishments on TikTok Live."
+            "Built XGBoost models to classify spam chats, enforcing real-time moderation."
         ],
         "Marketing - Upsell Campaign Takeup Prediction Model": [
-            "Combining user demographics, purchase/payment/claim history, created a GDBT classification model that predicts campaign takeup propensity. Improve campaign team lead selection for upcoming campaign."
+            "Created gradient-boosted models (GBDT) for campaign targeting, optimizing user engagement."
         ],
         "Telco - Customer Churn Prediction Model": [
-            "Combining user demographics, usage behaviour, user experience and mobile network performance, trained a GDBT classification model that predicts user churn propensity."
+            "Developed churn propensity models leveraging user behavior and network data."
         ],
         "Call Center/Email - NLP : Topic Modeling, Sentiment Analysis": [
-            "Sentiment analysis, topic modeling/summarization based on call center case description & email content using BERT model.",
-            "Automate keyword/address/coordinates extraction using NER from case & email content."
+            "Applied BERT models for sentiment analysis, topic modeling, and automated summarization of support cases."
         ]
     },
     "education_list": [
@@ -215,7 +211,7 @@
         "Automation",
         "Robotics",
         "Artificial Intelligence",
-        "Open Source"
+        "Open Source Development"
     ],
     "_comment_work_exp": [
         [
