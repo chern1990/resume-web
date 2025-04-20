@@ -4,7 +4,6 @@ RUN apt-get install -y ca-certificates fonts-liberation libappindicator3-1 libas
 
 WORKDIR /code
 COPY . ./
-RUN rm -r ./json
 ENV PORT 8000
 ENV HOST "0.0.0.0"
 EXPOSE ${PORT}:${PORT}
