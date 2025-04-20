@@ -25,7 +25,7 @@
                     "Lead AI-driven content risk control for TikTok LocalService, implementing cutting-edge LLM and GraphSage models.",
                     "Developed spam perception algorithms (Leiden clustering, content classification) to detect fraudulent content.",
                     "Built real-time behavioral sequence models, reducing fraud/spam activities by 90%.",
-                    "LoRA Fine-tuned LLM models for content violation prediction. Reduced violative POI reviews by 60% at launch.",
+                    "LoRA fine-tuned multiple LLM models (Qwen2.5/Gemma3/Llama3.2) for content violation prediction. Reduced violative POI reviews by 60% at launch.",
                     "Long term technical strategy planning & execution for Tiktok LocalService overall risk control.",
                     "Collaborated with cross-functional teams (XFN) to design anti-fraud policies and risk mitigation strategies.",
                     "Mentored junior/senior data scientists, fostering AI innovation and knowledge sharing."
@@ -109,10 +109,10 @@
             "Developed video content relevancy model to detect violatative POI videos."
         ],
         "TikTok - POI Reviews Violation Prediction": [
-            "LoRA Fine-tuned LLMs for content policy violation prediction. Leverages SOTA LLMs for real time inference and defence."
+            "LoRA fine-tuned LLMs (Qwen2.5/Gemma3) for content policy violation prediction. Leverages SOTA LLMs for real time inference and defence."
         ],
         "TikTok - Order Reviews Relevancy and Sentiment Analysis": [
-            "LoRA Fine-tuned LLMs for sentiment classification and content relevance scoring to improve review analysis."
+            "LoRA fine-tuned LLMs (Gemma2) for sentiment classification and content relevance scoring to improve review analysis."
         ],
         "TikTok - User Behavioural Sequence Model": [
             "Developed LSTM/Transformer models to detect suspicious activity in TikTok Live, achieving 90%+ fraud prevention accuracy."
